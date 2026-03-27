@@ -3,9 +3,10 @@ import styles from './TitleScreen.module.css';
 type Props = {
   highScore: number;
   onStart: () => void;
+  onHowToPlay: () => void;
 };
 
-export function TitleScreen({ highScore, onStart }: Props) {
+export function TitleScreen({ highScore, onStart, onHowToPlay }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.bgOrbs} aria-hidden="true">
@@ -30,6 +31,10 @@ export function TitleScreen({ highScore, onStart }: Props) {
 
         <button className={styles.startButton} onClick={onStart}>
           <span>START</span>
+        </button>
+
+        <button className={styles.howToPlayButton} onClick={onHowToPlay}>
+          遊び方
         </button>
 
         <p className={styles.hint}>3つ揃えて、進化させよう</p>
