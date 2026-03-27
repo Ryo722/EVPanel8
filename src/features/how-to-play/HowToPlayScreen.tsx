@@ -73,7 +73,7 @@ export function HowToPlayScreen({ onBack }: Props) {
           <table className={styles.table}>
             <tbody>
               <tr><td>選択属性を消去</td><td className={styles.value}>+1.0 / 枚</td></tr>
-              <tr><td>他属性を消去</td><td className={styles.value}>-0.3 / 枚</td></tr>
+              <tr><td>他属性を消去</td><td className={styles.value}>-0.4 / 枚</td></tr>
             </tbody>
           </table>
           <p className={styles.subHeading}>終了時の進化段階</p>
