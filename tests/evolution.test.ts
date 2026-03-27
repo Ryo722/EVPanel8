@@ -57,7 +57,7 @@ describe('calculateGaugeDelta', () => {
       { type: 'fire', positions: [{ row: 0, col: 0 }, { row: 0, col: 1 }, { row: 0, col: 2 }] },
     ];
     const delta = calculateGaugeDelta(matches, 'water');
-    expect(delta).toBe(-1.5); // 3枚 × -0.5
+    expect(delta).toBeCloseTo(-0.9); // 3枚 × -0.3
   });
 
   it('選択属性と他属性が混在する場合', () => {
@@ -66,7 +66,7 @@ describe('calculateGaugeDelta', () => {
       { type: 'fire', positions: [{ row: 1, col: 0 }, { row: 1, col: 1 }, { row: 1, col: 2 }] },
     ];
     const delta = calculateGaugeDelta(matches, 'water');
-    expect(delta).toBe(1.5); // 3 × +1 + 3 × -0.5 = 1.5
+    expect(delta).toBeCloseTo(2.1); // 3 × +1 + 3 × -0.3 = 2.1
   });
 });
 

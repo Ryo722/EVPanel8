@@ -43,8 +43,8 @@ export const GAME_CONFIG = {
   evolution: {
     /** 選択属性を消すごとにゲージ +1 */
     gaugePerMatch: 1,
-    /** 他属性を消すごとにゲージ -0.5 */
-    gaugePenalty: -0.5,
+    /** 他属性を消すごとにゲージ -0.3 */
+    gaugePenalty: -0.3,
     /** 段階閾値とボーナス */
     tiers: [
       { name: '完全進化', threshold: 15, bonus: 15000, emoji: '✨' },
