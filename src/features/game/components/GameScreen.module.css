@@ -1,0 +1,378 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 1rem;
+}
+
+.gameCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.scoreBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.scoreLabel {
+  font-size: 0.6rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+.scoreValue {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #f8fafc;
+  font-variant-numeric: tabular-nums;
+}
+
+.timerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.timerText {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #f8fafc;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.timerWarning {
+  color: #ef4444;
+  animation: pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.timerBar {
+  width: 80px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.timerFill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
+  transition: width 1s linear;
+}
+
+.timerFillWarning {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+.selectedBadge {
+  font-size: 1.6rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.3));
+}
+
+.moves {
+  font-size: 0.7rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+/* ── Fever Banner ── */
+.feverBanner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2rem;
+  animation: feverPulse 2s ease-in-out infinite;
+}
+
+@keyframes feverPulse {
+  0%, 100% { border-color: rgba(255, 255, 255, 0.08); }
+  50% { border-color: rgba(255, 255, 255, 0.2); }
+}
+
+.feverLabel {
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: #fbbf24;
+  text-transform: uppercase;
+}
+
+.feverEmoji {
+  font-size: 1.1rem;
+}
+
+.feverText {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.feverConflict {
+  font-size: 0.6rem;
+  color: #f87171;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+/* ── Clear Count ── */
+.clearCount {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.clearChip {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.7rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.clearChipSelected {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+.clearEmoji {
+  font-size: 0.9rem;
+}
+
+.clearNum {
+  font-weight: 800;
+  color: #e2e8f0;
+  font-variant-numeric: tabular-nums;
+  min-width: 1.2em;
+  text-align: center;
+}
+
+/* ── Evolution Gauge ── */
+.gaugeWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.gaugeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.gaugeLabel {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.gaugeTier {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.gaugeNext {
+  color: #475569;
+  font-weight: 600;
+}
+
+.gaugeBar {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: visible;
+}
+
+.gaugeFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease-out;
+  min-width: 0;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+.gaugeMarker {
+  position: absolute;
+  top: -2px;
+  width: 2px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 1px;
+  transform: translateX(-50%);
+}
+
+.gaugeValue {
+  font-size: 0.6rem;
+  color: #475569;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+/* ── Board ── */
+.boardWrap {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: min(80vw, 300px);
+  aspect-ratio: 1;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: #fff;
+  aspect-ratio: 1;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  background: var(--panel-color, transparent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cell:not(.cellEmpty)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.05) 40%,
+    transparent 60%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.cell:hover:not(.cellEmpty):not(:disabled) {
+  transform: scale(1.06);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cell:active:not(.cellEmpty):not(:disabled) {
+  transform: scale(0.94);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cellEmpty {
+  background: rgba(255, 255, 255, 0.02);
+  cursor: default;
+  border: 2px dashed rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* フィーバー属性のセル — 軽い輝き */
+.cellFever {
+  border-color: rgba(251, 191, 36, 0.5);
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: feverGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes feverGlow {
+  0%, 100% { box-shadow: 0 0 12px rgba(251, 191, 36, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2); }
+}
+
+.cellEmoji {
+  font-size: clamp(2rem, 8vw, 3rem);
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Animations ── */
+
+.cellSliding {
+  animation: slideIn var(--slide-duration, 150ms) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translate(var(--slide-from-x, 0), var(--slide-from-y, 0)); }
+  to { transform: translate(0, 0); }
+}
+
+.cellClearing {
+  animation: clearOut 300ms ease-in forwards;
+  pointer-events: none;
+}
+
+@keyframes clearOut {
+  0% { transform: scale(1); opacity: 1; filter: brightness(1); }
+  40% { transform: scale(1.15); opacity: 1; filter: brightness(1.6); }
+  100% { transform: scale(0); opacity: 0; filter: brightness(2); }
+}
+
+.cellAppearing {
+  animation: popIn 250ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}

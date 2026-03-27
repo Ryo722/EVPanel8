@@ -1,0 +1,201 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+.heading {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #f1f5f9;
+  letter-spacing: 0.15em;
+}
+
+/* ── Evolution ── */
+.evolution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.2rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.evoSuccess {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.evoFail {
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.evoMainEmoji {
+  font-size: 3rem;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.evoTierBadge {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+}
+
+.evoName {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.evoBonus {
+  font-size: 0.9rem;
+  color: #4ade80;
+  font-weight: 700;
+}
+
+.evoGauge {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* ── Score ── */
+.scoreSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.scoreLabel {
+  font-size: 0.65rem;
+  color: #64748b;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+.scoreValue {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #f8fafc;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.newRecord {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fbbf24;
+  animation: bounce 0.6s infinite alternate;
+  margin-top: 0.2rem;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-3px); }
+}
+
+/* ── Clear Summary ── */
+.clearSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.clearRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.clearIcon {
+  font-size: 1.1rem;
+  width: 1.4rem;
+  text-align: center;
+}
+
+.clearLabel {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  width: 1.8rem;
+}
+
+.clearBar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.clearFill {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease-out;
+  min-width: 2px;
+}
+
+.clearValue {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  font-variant-numeric: tabular-nums;
+  min-width: 2rem;
+  text-align: right;
+}
+
+/* ── High Score ── */
+.highScore {
+  font-size: 0.8rem;
+  color: #475569;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* ── Restart ── */
+.restartButton {
+  margin-top: 0.5rem;
+  padding: 0.85rem 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+}
+
+.restartButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.4);
+}
+
+.restartButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+}
