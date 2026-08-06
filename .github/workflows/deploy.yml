@@ -25,6 +25,9 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Use Takumi Guard registry
+        run: npm config set registry https://npm.flatt.tech/
+
       - run: npm ci
 
       - run: npm run build
